@@ -11,6 +11,7 @@ public class KillVolumeTool : MonoBehaviour
 
     [SerializeField] private Color _color = Color.red;
     [SerializeField] private Material _material;
+    [SerializeField] private GameObject _dieText;
     [SerializeField] private ParticleSystem _particle;
     [SerializeField] private AudioClip _audio;
 
@@ -18,7 +19,6 @@ public class KillVolumeTool : MonoBehaviour
     {
         _collider = GetComponent<Collider>();
         _collider.isTrigger = true;
-        //_material = GetComponent<Material>();
         _material.color = _color;
         _particle.Pause();
 
@@ -30,6 +30,7 @@ public class KillVolumeTool : MonoBehaviour
     private void OnTriggerEnter (Collider other)
     {
         OnEnterTrigger.Invoke();
+        text();
         particles(_particle);
         Audio(_audio, 1);
     }
@@ -38,7 +39,6 @@ public class KillVolumeTool : MonoBehaviour
     {
         if(_particle != null)
         {
-            Debug.Log("particles");
             _particle.Play();
         }
     }
@@ -54,5 +54,11 @@ public class KillVolumeTool : MonoBehaviour
         Object.Destroy(audioObject, _clip.length);
 
         return audioSource;
+    }
+
+    public void text()
+    {
+        bool current = _dieText.activeSelf;
+        _dieText.SetActive(!current);
     }
 }

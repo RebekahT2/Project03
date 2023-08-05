@@ -624,18 +624,6 @@ MonoBehaviour:
   OnEnterTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1521004547}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1387191923}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -648,8 +636,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _color: {r: 0, g: 0.060289145, b: 1, a: 1}
+  _color: {r: 0, g: 1, b: 0.8106227, a: 1}
   _material: {fileID: 2100000, guid: 4bca05cc17dd346e08a7efb1bd44c83c, type: 2}
+  _dieText: {fileID: 1521004547}
   _particle: {fileID: 1015671797}
   _audio: {fileID: 8300000, guid: 77712174d8f2f42f1b5b4869bf430d0d, type: 3}
 --- !u!1 &963194225
